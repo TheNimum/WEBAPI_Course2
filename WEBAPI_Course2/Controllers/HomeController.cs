@@ -14,5 +14,11 @@ namespace WEBAPI_Course2.Controllers
 
             return View();
         }
+        public ActionResult GetBooks()
+        {
+
+
+            return new JsonResult { Data = "Test", JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
     }
 }
