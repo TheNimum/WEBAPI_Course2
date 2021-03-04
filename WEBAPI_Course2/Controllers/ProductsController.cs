@@ -5,9 +5,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Mvc;
-using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using WEBAPI_Course2.Models;
+using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
+
 
 namespace WEBAPI_Course2.Controllers
 {
@@ -16,10 +17,10 @@ namespace WEBAPI_Course2.Controllers
 
     public class ProductsController : Controller
     {
-        
+        public List<Books> book = new List<Books>();
 
         [HttpGet]
-        public ActionResult GetBookByID(int id)
+        public ActionResult GetBookByID(int id) 
 
         {
             List<Books> binfo = new List<Books>
