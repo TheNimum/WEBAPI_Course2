@@ -25,9 +25,9 @@ namespace WEBAPI_Course2.Services
             return new List<IBook>();
         }
 
-        public void RemoveBook(int id)
+        public bool RemoveBook(int id)
         {
-           
+            return false;
         }
     }
 }

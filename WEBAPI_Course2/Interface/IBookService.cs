@@ -9,7 +9,7 @@ namespace WEBAPI_Course2.Interface
     public interface IBookService
     {
         bool AddBook(IBook book);
-        void RemoveBook(int id);
+        bool RemoveBook(int id);
         IBook GetBook(int id);
         List<IBook> GetListOfBooks();
 

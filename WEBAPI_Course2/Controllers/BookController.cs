@@ -26,6 +26,10 @@ namespace WEBAPI_Course2.Controllers
         [HttpGet]
         public ActionResult GetListOfBooks()
         {
+            //var result = bookservice.GetListOfBooks();
+            //if (result == null)
+            //    return new HttpStatusCodeResult(500);
+
             return new JsonResult { Data = bookservice.GetListOfBooks(), JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
         [HttpPost]
@@ -37,5 +41,14 @@ namespace WEBAPI_Course2.Controllers
 
             return new HttpStatusCodeResult(200);
         }
-    } 
+        [HttpDelete]
+        public ActionResult DeleteBookByID(int id)
+        {
+            var result = bookservice.RemoveBook(id);
+            if (result == false)
+            return new HttpStatusCodeResult(500);
+
+            return new HttpStatusCodeResult(200);
+        }
+    }
 }
